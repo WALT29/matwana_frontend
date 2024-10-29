@@ -1,8 +1,18 @@
-# React + Vite
+# Matwana Parcel Tracking System - Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is the frontend of a Matwana parcel tracking system, built with React. It enables users to track parcels, calculate shipping costs, manage user accounts, view and manage vehicles, and more.
 
-Currently, two official plugins are available:
+## WEBSITE URL
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+https://matwana-frontend-ndfr.onrender.com/
+
+- To signup as admin use https://matwana-frontend-ndfr.onrender.com/signupA
+
+## Features
+
+- **User Management**: Signup, login, and role-based access (customer, customer service, admin).
+- **Parcel Tracking**: Track parcels by tracking number or view in "My Packages" list.
+- **Quote Calculation**: Calculate shipping costs based on destination and weight.
+- **Vehicle Management**: View and update vehicle status and details.
+- **Admin Dashboard**: Manage users, parcels, and roles.
+- **Status Notifications**: User-friendly notifications using `toastify-js`.
