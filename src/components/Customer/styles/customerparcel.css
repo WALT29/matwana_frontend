@@ -1,0 +1,84 @@
+.parcel-items {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .parcel-tracking {
+    font-size: 1.2em;
+    font-weight: bold;
+  }
+  
+  .parcel-items.parcel-delivered {
+    background-color: #28a745; 
+    border-color: #28a745;
+    color: #000;
+  }
+  .parcel-items.parcel-in-transit {
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+  }
+  
+  .parcel-items.parcel-default {
+    background-color: #f8f9fa; 
+    border-color: #ddd;
+  }
+  
+  .parcel-items:hover {
+    background-color: #000000;
+    color:whitesmoke
+  }
+
+  .parcel-details-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .section-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    color: #333;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .parcel-details-container p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    line-height: 1.6;
+    color: #555;
+  }
+  
+  .parcel-details-container p strong {
+    color: #333;
+    font-weight: 600;
+  }
+  .back-button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1em;
+  }
+  
+  .back-button:hover {
+    background-color: #0056b3;
+  }
+  
+  

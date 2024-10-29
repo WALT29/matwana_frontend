@@ -1,0 +1,100 @@
+.quote-container {
+  width: 100%;
+  max-width: 700px; 
+  margin: 30px auto; 
+  background-color: #f9f9f9; 
+  padding: 40px; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); 
+}
+
+.quote-heading {
+  text-align: center;
+  color: #333; 
+  font-size: 30px; 
+  margin-bottom: 30px;
+  letter-spacing: 1px; 
+  font-weight: 600; 
+}
+
+.quote-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  color: #333;
+}
+
+label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #333; 
+  font-size: 18px; 
+}
+
+select,
+input[type="number"] {
+  padding: 14px; 
+  border-radius: 8px; 
+  border: 1px solid #ccc;
+  font-size: 18px; 
+  color: #333;
+  background-color: #fff; 
+  transition: border-color 0.3s;
+}
+
+select:focus,
+input[type="number"]:focus {
+  border-color: #4CAF50; 
+  outline: none; 
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.4); 
+}
+
+.error-message {
+  color: red;
+  font-size: 16px; 
+  margin-top: 5px;
+  font-style: italic;
+}
+
+p {
+  font-size: 20px; 
+  color: #333;
+}
+
+.quote-btn {
+  background-color: #4CAF50; 
+  color: white;
+  padding: 15px 20px; 
+  border: none;
+  border-radius: 8px; 
+  font-size: 18px; 
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.quote-btn:hover {
+  background-color: #45a049; 
+}
+
+.quote-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .quote-container {
+    padding: 30px; 
+  }
+
+  h2 {
+    font-size: 26px; 
+  }
+  
+  .quote-btn {
+    padding: 12px 18px; 
+  }
+}

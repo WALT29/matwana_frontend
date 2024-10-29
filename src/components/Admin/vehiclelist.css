@@ -1,0 +1,75 @@
+.vehicle-details {
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    max-width: 600px;
+    margin: 0 auto;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.vehicle-details form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.vehicle-details label {
+    font-weight: bold;
+    color: #333;
+}
+
+.vehicle-details input,
+.vehicle-details select {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+.vehicle-details input[type="text"],
+.vehicle-details input[type="number"],
+.vehicle-details select {
+    max-width: 100%;
+}
+
+.vehicle-details button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.vehicle-details button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.vehicle-details button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+.vehicle-details button:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .vehicle-details {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .vehicle-details form {
+        gap: 10px;
+    }
+
+    .vehicle-details button {
+        width: 100%;
+    }
+}

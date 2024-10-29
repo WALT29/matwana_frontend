@@ -1,0 +1,71 @@
+.locations-list-container {
+    padding: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.locations-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.locations-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    cursor: pointer;
+}
+
+.locations-list li:hover {
+    background-color: #e0e0e0;
+}
+
+.location-details {
+    margin-top: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+button {
+    margin-top: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+}
+
+button[type="button"] {
+    background-color: #f44336;
+    color: white;
+}
+
+input {
+    padding: 10px; 
+    border: 1px solid #ddd; 
+    border-radius: 5px; 
+    width: 100%; 
+    box-sizing: border-box; 
+    color: #333; 
+    background-color: #f9f9f9; 
+}
+
+
+input:focus {
+    border-color: #4CAF50; 
+    outline: none;
+}

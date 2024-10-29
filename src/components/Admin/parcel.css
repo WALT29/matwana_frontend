@@ -1,0 +1,97 @@
+.parcel-container {
+    max-width: auto;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.parcel-list {
+    margin-bottom: 20px;
+}
+
+.parcel-item {
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fff;
+    transition: background-color 0.3s;
+}
+
+.parcel-item:hover {
+    background-color: #f1f1f1;
+}
+
+.parcel-item p {
+    margin: 5px 0;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #000;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+textarea,
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+textarea:focus,
+select:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+.deleteButton {
+    background-color: #FF6347;
+}
+
+.editButton {
+    border-color: #4CAF50;
+}
