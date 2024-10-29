@@ -14,7 +14,7 @@ const ManageCustomers = () => {
   const [searchPhone, setSearchPhone] = useState(''); 
 
   useEffect(() => {
-    fetch('https://matwana-backend-copy.onrender.com/users', {
+    fetch('https://matwana-backend-copy-1.onrender.com/users', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`, 
       },
@@ -54,7 +54,7 @@ const ManageCustomers = () => {
 
   const handleEditSubmit = (e) => {
     e.preventDefault();
-    fetch(`https://matwana-backend-copy.onrender.com/users/${selectedUser.id}`, {
+    fetch(`https://matwana-backend-copy-1.onrender.com/users/${selectedUser.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -78,7 +78,7 @@ const ManageCustomers = () => {
   };
 
   const handleDelete = (userId) => {
-    fetch(`https://matwana-backend-copy.onrender.com/users/${selectedUser.id}`, {
+    fetch(`https://matwana-backend-copy-1.onrender.com/users/${selectedUser.id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,

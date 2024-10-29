@@ -9,7 +9,7 @@ const Navbar = () => {
   const isLoggedIn=!!localStorage.getItem('access_token')
   
   const handleLogout = () => {
-    fetch('https://matwana-backend-copy.onrender.com/auth/logout', {
+    fetch('https://matwana-backend-copy-1.onrender.com/auth/logout', {
       method: 'GET',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,

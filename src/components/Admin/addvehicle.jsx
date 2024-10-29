@@ -21,7 +21,7 @@ const AddVehicle = () => {
     }, []);
 
     const fetchLocations = () => {
-        fetch('https://matwana-backend-copy.onrender.com/locations', {
+        fetch('https://matwana-backend-copy-1.onrender.com/locations', {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('access_token')}`,
             },
@@ -45,7 +45,7 @@ const AddVehicle = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        fetch('https://matwana-backend-copy.onrender.com/vehicles', {
+        fetch('https://matwana-backend-copy-1.onrender.com/vehicles', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

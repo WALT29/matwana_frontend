@@ -26,7 +26,7 @@ const AddUsers = () => {
       role, // Use the selected role
     };
 
-    fetch('https://matwana-backend-copy.onrender.com/auth/signup', {
+    fetch('https://matwana-backend-copy-1.onrender.com/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

@@ -12,7 +12,7 @@ const GetQuote = () => {
   const [price, setPrice] = useState(0);
 
   useEffect(() => {
-    fetch('https://matwana-backend-copy.onrender.com/locations')
+    fetch('https://matwana-backend-copy-1.onrender.com/locations')
       .then((response) => response.json())
       .then((data) => {
         if(Array.isArray(data)){
