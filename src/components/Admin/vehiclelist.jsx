@@ -24,7 +24,7 @@ const VehiclesList = () => {
     }, []);
 
     const fetchVehicles = () => {
-        fetch('http://127.0.0.1:5555/vehicles', {
+        fetch('https://matwana-backend-copy.onrender.com/vehicles', {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('access_token')}`,
             },
@@ -39,7 +39,7 @@ const VehiclesList = () => {
     };
 
     const fetchLocations = () => {
-        fetch('http://127.0.0.1:5555/locations', {
+        fetch('https://matwana-backend-copy.onrender.com/locations', {
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('access_token')}`,
             },
@@ -63,7 +63,7 @@ const VehiclesList = () => {
 
     const handleEditSubmit = (e) => {
         e.preventDefault();
-        fetch(`http://127.0.0.1:5555/vehicles/${selectedVehicle.id}`, {
+        fetch(`https://matwana-backend-copy.onrender.com/vehicles/${selectedVehicle.id}`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
@@ -83,7 +83,7 @@ const VehiclesList = () => {
     };
 
     const handleDelete = (vehicleId) => {
-        fetch(`http://127.0.0.1:5555/vehicles/${vehicleId}`, {
+        fetch(`https://matwana-backend-copy.onrender.com/vehicles/${vehicleId}`, {
             method: 'DELETE',
             headers: {
                 Authorization: `Bearer ${localStorage.getItem('access_token')}`,

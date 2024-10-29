@@ -11,7 +11,7 @@ const CustomerParcel = () => {
 
   const customerIdInt=parseInt(customerId)
   useEffect(() => {
-    fetch(`http://127.0.0.1:5555/parcels`, {
+    fetch(`https://matwana-backend-copy.onrender.com/parcels`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
       },
@@ -27,7 +27,7 @@ const CustomerParcel = () => {
       })
       .catch((error) => console.error('Error fetching sent parcels:', error));
 
-      fetch('http://127.0.0.1:5555/vehicles')
+      fetch('https://matwana-backend-copy.onrender.com/vehicles')
       .then(response=>response.json())
       .then((data)=>{
         setVehicle(data)

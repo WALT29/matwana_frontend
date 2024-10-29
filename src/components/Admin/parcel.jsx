@@ -22,7 +22,7 @@ const Parcel = () => {
   const user_id = localStorage.getItem('id');
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/parcels', {
+    fetch('https://matwana-backend-copy.onrender.com/parcels', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
       },
@@ -39,7 +39,7 @@ const Parcel = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/locations')
+    fetch('https://matwana-backend-copy.onrender.com/locations')
       .then((response) => response.json())
       .then((data) => {
         setLocations(data)
@@ -50,7 +50,7 @@ const Parcel = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/vehicles',
+    fetch('https://matwana-backend-copy.onrender.com/vehicles',
         {
             headers:{
                 Authorization :`Bearer ${localStorage.getItem('access_token')}`
@@ -78,7 +78,7 @@ const Parcel = () => {
 
   
   const handleEditParcel = (parcelId) => {
-    fetch(`http://127.0.0.1:5555/parcels/${parcelId}`, {
+    fetch(`https://matwana-backend-copy.onrender.com/parcels/${parcelId}`, {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
       },
@@ -95,7 +95,7 @@ const Parcel = () => {
         setSelectedVehicleId(data.vehicle_id);
 
         // Fetch sender details
-        fetch(`http://127.0.0.1:5555/users/${data.sender_id}`, {
+        fetch(`https://matwana-backend-copy.onrender.com/users/${data.sender_id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('access_token')}`,
           },
@@ -105,7 +105,7 @@ const Parcel = () => {
           .catch((error) => console.error('Error fetching sender details:', error));
 
         // Fetch recipient details
-        fetch(`http://127.0.0.1:5555/users/${data.recipient_id}`, {
+        fetch(`https://matwana-backend-copy.onrender.com/users/${data.recipient_id}`, {
           headers: {
             Authorization: `Bearer ${localStorage.getItem('access_token')}`,
           },
@@ -130,7 +130,7 @@ const Parcel = () => {
       vehicle_id: selectedVehicleId || null,
     };
 
-    fetch(`http://127.0.0.1:5555/parcels/${parcelToEdit.id}`, {
+    fetch(`https://matwana-backend-copy.onrender.com/parcels/${parcelToEdit.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -164,7 +164,7 @@ const Parcel = () => {
 
   const handleDeleteParcel = (parcelId) => {
     if (window.confirm("Are you sure you want to delete this parcel?")) {
-      fetch(`http://127.0.0.1:5555/parcels/${parcelId}`, {
+      fetch(`https://matwana-backend-copy.onrender.com/parcels/${parcelId}`, {
         method: 'DELETE',
         headers: {
           Authorization: `Bearer ${localStorage.getItem('access_token')}`,

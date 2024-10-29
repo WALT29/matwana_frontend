@@ -36,7 +36,7 @@ const AddParcel = () => {
   }, []);
 
   useEffect(() => {
-    fetch('http://127.0.0.1:5555/locations')
+    fetch('https://matwana-backend-copy.onrender.com/locations')
       .then((response) => response.json())
       .then((data) => {
         setLocations(data);
@@ -71,7 +71,7 @@ const AddParcel = () => {
       vehicle_id: selectedVehicleId || null,
     };
 
-    fetch('http://127.0.0.1:5555/parcels', {
+    fetch('https://matwana-backend-copy.onrender.com/parcels', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -149,7 +149,7 @@ const AddParcel = () => {
     }
 
     
-    fetch('http://127.0.0.1:5555/users', {
+    fetch('https://matwana-backend-copy.onrender.com/users', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
       },

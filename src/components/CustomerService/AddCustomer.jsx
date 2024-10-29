@@ -26,7 +26,7 @@ const AddCustomer = () => {
       role, 
     };
 
-    fetch('http://127.0.0.1:5555/auth/signup', {
+    fetch('https://matwana-backend-copy.onrender.com/auth/signup', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

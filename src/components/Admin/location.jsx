@@ -18,7 +18,7 @@ const LocationsList = () => {
   }, []);
 
   const fetchLocations = () => {
-    fetch('http://127.0.0.1:5555/locations', {
+    fetch('https://matwana-backend-copy.onrender.com/locations', {
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
       },
@@ -53,7 +53,7 @@ const LocationsList = () => {
 
   const handleAddLocation = (e) => {
     e.preventDefault();
-    fetch('http://127.0.0.1:5555/locations', {
+    fetch('https://matwana-backend-copy.onrender.com/locations', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -104,7 +104,7 @@ const LocationsList = () => {
 
   const handleEditSubmit = (e) => {
     e.preventDefault();
-    fetch(`http://127.0.0.1:5555/locations/${selectedLocation.id}`, {
+    fetch(`https://matwana-backend-copy.onrender.com/locations/${selectedLocation.id}`, {
       method: 'PUT',
       headers: {
         'Content-Type': 'application/json',
@@ -143,7 +143,7 @@ const LocationsList = () => {
   };
 
   const handleDelete = (id) => {
-    fetch(`http://127.0.0.1:5555/locations/${id}`, {
+    fetch(`https://matwana-backend-copy.onrender.com/locations/${id}`, {
       method: 'DELETE',
       headers: {
         Authorization: `Bearer ${localStorage.getItem('access_token')}`,
