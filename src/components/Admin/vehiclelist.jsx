@@ -31,7 +31,7 @@ const VehiclesList = () => {
         })
             .then(response => response.json())
             .then(data => {
-                setVehicles(data);
+                setVehicles(Array.isArray(data) ? data : []);
             })
             .catch(error => {
                 console.error('Error fetching vehicles:', error);
@@ -128,15 +128,19 @@ const VehiclesList = () => {
         <div className="vehicles-list-container">
             <h2 className="section-title">All Vehicles ({vehicles.length})</h2>
             <ul className="vehicles-list">
-                {vehicles.map(vehicle => (
-                    <li key={vehicle.id} onClick={() => handleVehicleClick(vehicle)}>
-                        <span className="vehicle-number">{vehicle.number_plate}</span>
-                        <span className="vehicle-driver">{vehicle.driver_name}</span>
-                        <span className="vehicle-destination">
-                            {vehicle.location ? `${vehicle.location.origin} to ${vehicle.location.destination}` : 'No location'}
-                        </span>
-                    </li>
-                ))}
+                {vehicles.length > 0 ? (
+                    vehicles.map(vehicle => (
+                        <li key={vehicle.id} onClick={() => handleVehicleClick(vehicle)}>
+                            <span className="vehicle-number">{vehicle.number_plate}</span>
+                            <span className="vehicle-driver">{vehicle.driver_name}</span>
+                            <span className="vehicle-destination">
+                                {vehicle.location ? `${vehicle.location.origin} to ${vehicle.location.destination}` : 'No location'}
+                            </span>
+                        </li>
+                    ))
+                ) : (
+                    <li>No vehicles available</li>
+                )}
             </ul>
             {selectedVehicle && (
                 <div className="vehicle-details">
